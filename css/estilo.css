@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.hola {
+    display: block;
+    margin-top: 0;
+}
+.hola h1 {
+    color: yellow;/**/ 
+     font-size: 45px; /**/
+     text-shadow: -3px -3px 1px black, /*conocido como el efecto NEON o fluorescente */
+     0 0 25px #00FF99,
+     0 0 50px #00FF99,
+     0 0 100px #00FF99;
+     text-align: center; /**/
+     background-color: #006633 ; /**/
+     font-family: verdana;
+     border: 4px outset #006633; /**/
+     letter-spacing: 10px; /**/
+     padding: 2%; /**/
+     margin-bottom: 0; /**/
+     }
+
+
+.menu {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que los botones se envuelvan en pantallas pequeñas */
+    justify-content: center; /* Centrar los botones */
+}
+
+.menu-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-icon {
+    font-size: 20px;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column; /* Apilar los botones en pantallas pequeñas */
+        align-items: stretch; /* Ancho completo para los botones */
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .menu-button {
+        padding: 12px 20px;
+        justify-content: center; /* Centrar el contenido del botón */
+    }
+
+    .button-icon {
+        display: none; /* Opcional: ocultar el icono en pantallas muy pequeñas */
+    }
+    .menu-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px; /* tamaño pequeño y elegante */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.menu-logo:hover {
+  transform: scale(1.1); /* efecto pequeño al pasar el mouse */
+}

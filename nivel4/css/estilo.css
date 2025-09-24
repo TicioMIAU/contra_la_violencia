@@ -1,0 +1,111 @@
+/* Fondo con animación suave */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #00aaff, #0044cc, #0066cc, #00ccff);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00ffff;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.score, .level, .timer {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+#question-text {
+  font-size: 1.5rem;
+  margin: 30px 0;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.answer-btn {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  margin: 10px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+  min-width: 200px;
+}
+
+.answer-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.answer-btn:active {
+  transform: scale(0.95);
+}
+
+/* Estilos para respuestas correctas e incorrectas */
+.answer-btn.correct {
+  background-color: #4CAF50 !important; /* Verde */
+  box-shadow: 0 0 15px #4caf50;
+  color: white;
+}
+
+.answer-btn.incorrect {
+  background-color: #f44336 !important; /* Rojo */
+  box-shadow: 0 0 15px #f44336;
+  color: white;
+}
+
+#next-button, #menu-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #00bfa5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#next-button:hover, #menu-button:hover {
+  background-color: #008e76;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
